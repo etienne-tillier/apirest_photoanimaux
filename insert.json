@@ -1,0 +1,18 @@
+[{ "iso" : 200,
+    "idespeceanimal" : 2,
+    "latitude" : 52.8,
+    "longitude" : 85,
+    "lienfichier" : "hhttps./ddada",
+    "description" : "lalalallalala",
+    "camera" : "nikon D90",
+    "objectif" : "300mm",
+    "ouverture" : "f4",
+    "vitesse" : "1s"}
+
+,
+
+    { "idutilisateur" : 11,
+        "date" : "12/01/2001",
+        "description" : "petite description",
+        "longitude" : 41.4,
+        "latitude" : 57.8} ]
