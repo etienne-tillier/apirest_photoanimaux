@@ -18,18 +18,10 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE photos_animaux;
 --
 -- TOC entry 3369 (class 1262 OID 16394)
 -- Name: photos_animaux; Type: DATABASE; Schema: -; Owner: postgres
 --
-
-CREATE DATABASE photos_animaux WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'French_France.1252';
-
-
-ALTER DATABASE photos_animaux OWNER TO postgres;
-
-\connect photos_animaux
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
