@@ -1,5 +1,6 @@
 [{ "iso" : 200,
     "idespeceanimal" : 2,
+    "idsortie" : 4,
     "latitude" : 52.8,
     "longitude" : 85,
     "lienfichier" : "hhttps./ddada",
@@ -11,7 +12,7 @@
 
 ,
 
-    { "idutilisateur" : 11,
+    { "idutilisateur" : 12,
         "date" : "12/01/2001",
         "description" : "petite description",
         "longitude" : 41.4,
