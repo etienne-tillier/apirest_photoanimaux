@@ -12,8 +12,12 @@
 
 ,
 
-    { "idutilisateur" : 12,
-        "date" : "12/01/2001",
-        "description" : "petite description",
-        "longitude" : 41.4,
-        "latitude" : 57.8} ]
+{ "idutilisateur" : 13,
+    "date" : "12/01/2001",
+    "description" : "petite lalalala",
+    "longitude" : 41.4,
+    "latitude" : 57.8,
+    "prive" : "false",
+    "especes" : [4,6]
+    } 
+]
