@@ -5,7 +5,7 @@
 -- Dumped from database version 14.2
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-03-15 17:19:21
+-- Started on 2022-03-16 15:03:59
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -233,13 +233,11 @@ ALTER TABLE ONLY public.utilisateurs ALTER COLUMN id SET DEFAULT nextval('public
 -- Data for Name: associationcategorieespece; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.associationcategorieespece (idcategorie, idespece) FROM stdin;
-3	4
-4	4
-5	4
-2	6
-5	6
-\.
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (3, 4);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (4, 4);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (5, 4);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (2, 6);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (5, 6);
 
 
 --
@@ -248,8 +246,8 @@ COPY public.associationcategorieespece (idcategorie, idespece) FROM stdin;
 -- Data for Name: associationespecesortie; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.associationespecesortie (idsortie, idespece) FROM stdin;
-\.
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (16, 4);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (16, 6);
 
 
 --
@@ -258,11 +256,9 @@ COPY public.associationespecesortie (idsortie, idespece) FROM stdin;
 -- Data for Name: categoriesanimal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.categoriesanimal (id, nomcategorie) FROM stdin;
-3	poisson
-4	insecte
-5	reptile
-\.
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (3, 'poisson');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (4, 'insecte');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (5, 'reptile');
 
 
 --
@@ -271,11 +267,9 @@ COPY public.categoriesanimal (id, nomcategorie) FROM stdin;
 -- Data for Name: especeanimal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) FROM stdin;
-2	150	250	la giraffe	giraffe	jaune et noire
-4	14	50	./45485	chat	noir et blanc
-6	1	10	./48542	lézar	vertc
-\.
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (2, 150, 250, 'la giraffe', 'giraffe', 'jaune et noire');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (4, 14, 50, './45485', 'chat', 'noir et blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (6, 1, 10, './48542', 'lézar', 'vertc');
 
 
 --
@@ -284,8 +278,6 @@ COPY public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) FRO
 -- Data for Name: photos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) FROM stdin;
-\.
 
 
 --
@@ -294,8 +286,7 @@ COPY public.photos (id, idespeceanimal, iso, lienfichier, description, camera, o
 -- Data for Name: sorties; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) FROM stdin;
-\.
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (16, 13, '2001-01-12', 'petite lalalala', 41.4, 57.8, false);
 
 
 --
@@ -304,10 +295,8 @@ COPY public.sorties (id, idutilisateur, date, description, longitude, latitude, 
 -- Data for Name: utilisateurs; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.utilisateurs (id, isadmin, email, pseudo) FROM stdin;
-12	f	etienne@gmail.com	etienne
-13	f	paul@gmail.com	paul
-\.
+INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES (12, false, 'etienne@gmail.com', 'etienne');
+INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES (13, false, 'paul@gmail.com', 'paul');
 
 
 --
@@ -343,7 +332,7 @@ SELECT pg_catalog.setval('public."Photos_id_seq"', 12, true);
 -- Name: Sorties_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Sorties_id_seq"', 15, true);
+SELECT pg_catalog.setval('public."Sorties_id_seq"', 16, true);
 
 
 --
@@ -472,7 +461,7 @@ ALTER TABLE ONLY public.sorties
     ADD CONSTRAINT utilisateur FOREIGN KEY (idutilisateur) REFERENCES public.utilisateurs(id) ON DELETE CASCADE;
 
 
--- Completed on 2022-03-15 17:19:22
+-- Completed on 2022-03-16 15:03:59
 
 --
 -- PostgreSQL database dump complete
