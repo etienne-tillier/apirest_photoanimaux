@@ -46,9 +46,10 @@ const updateUtilisateur = async (req,res) => {
 // insert a new utilisateur
 const insertUtilisateur = async (req,res) => {
     try {
-        const { email, pseudo } = req.body
+        const { id, email, pseudo } = req.body
         //suffit pour l'ajout sur la bd
         const newUtilisateur = await pool.query(queries.insertUtilisateur, [
+            id,
             email,
             pseudo,
             false
