@@ -18,6 +18,27 @@ const getAllSorties = async (req, res) => {
   }
 };
 
+
+//get all sorties for an utilisateur
+const getAllSortiesUtilisateur = async (req, res) => {
+  try {
+    const {idutilisateur} = req.body
+    const allSorties = await pool.query(queries.getSortiesForAnUtilisateur, [
+      idutilisateur
+    ]);
+    for (let i = 0; i < allSorties.rows.length; i++) {
+      let especesForSortie = await pool.query(queries.getAllEspeceForASortie, [
+        allSorties.rows[i].id,
+      ]);
+      allSorties.rows[i].especes = especesForSortie.rows;
+    }
+    res.status(200).json(allSorties.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+
 //get a sortie by id
 const getSortieId = async (req, res) => {
   try {
@@ -120,4 +141,5 @@ module.exports = {
   insertSortie,
   deleteSortie,
   updateSortie,
+  getAllSortiesUtilisateur,
 };

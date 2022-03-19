@@ -11,6 +11,7 @@ const getAllEspeceForASortie =
   "SELECT * FROM especeanimal E JOIN associationespecesortie A ON E.id = A.idespece WHERE A.idsortie = $1";
 const deleteAllEspeceForSortie =
   "DELETE FROM associationespecesortie WHERE idsortie = $1";
+const getSortiesForAnUtilisateur = "SELECT * FROM sorties WHERE idutilisateur = $1";
 
 module.exports = {
   getSorties,
@@ -21,4 +22,5 @@ module.exports = {
   insertEspeceSortie,
   getAllEspeceForASortie,
   deleteAllEspeceForSortie,
+  getSortiesForAnUtilisateur
 };

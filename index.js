@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json()) //req.body
 //ROUTES//
 
-//create a user
+app.use("/images/especeAnimaux",express.static("images/especeAnimaux"))
 
 app.use("/utilisateurs", userRoutes)
 app.use("/especeAnimal", especeAnimalRoutes)

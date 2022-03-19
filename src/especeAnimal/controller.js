@@ -41,12 +41,19 @@ const getEspeceAnimalId = async (req,res) => {
 // update an animal by id
 const updateEspeceAnimal = async (req,res) => {
     try {
-        const {nomespece, poidsmoyen, couleur, image, taille, categories} = req.body
+        const {nomespece, poidsmoyen, couleur, imageEspece, taille, categories} = req.body
+        let lienImage = ""
+        if (req.file) {
+            lienImage = req.file.destination + "/" + req.file.originalname
+        }
+        else {
+            lienImage = imageEspece
+        }
         const especeAnimalUpdated = await pool.query(queries.updateEspeceAnimal , [
             nomespece,
             poidsmoyen,
             couleur,
-            image,
+            lienImage,
             taille,
             req.params.id
         ])
@@ -69,13 +76,14 @@ const updateEspeceAnimal = async (req,res) => {
 // insert a new animal
 const insertEspeceAnimal = async (req,res) => {
     try {
-        const { nomespece, poidsmoyen, couleur, image, taille, categories } = req.body
+        console.log(req.file)
+        const { nomespece, poidsmoyen, couleur, taille, categories } = req.body
         //suffit pour l'ajout sur la bd
         const newEspeceAnimal = await pool.query(queries.insertEspeceAnimal, [
             nomespece,
             poidsmoyen,
             couleur,
-            image,
+            req.file.destination + "/" + req.file.originalname,
             taille
         ])
         //ajoute les catégories dans la table associative
