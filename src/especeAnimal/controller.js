@@ -60,7 +60,8 @@ const updateEspeceAnimal = async (req,res) => {
         await pool.query(queries.deleteAllCategoeriesForAnAnimal, [
             req.params.id
         ])
-        for (let idCategorie of categories){
+        let categoriesParsed = JSON.parse(categories);
+        for (let idCategorie of JSON.parse(categories)){
             await pool.query(queries.insertEspeceAnimalCategorieAnimal, [
                 idCategorie,
                 req.params.id
@@ -86,8 +87,9 @@ const insertEspeceAnimal = async (req,res) => {
             req.file.destination + "/" + req.file.originalname,
             taille
         ])
+        let categoriesParsed = JSON.parse(categories);
         //ajoute les catégories dans la table associative
-        for (let idCategorie of categories){
+        for (let idCategorie of categoriesParsed){
             await pool.query(queries.insertEspeceAnimalCategorieAnimal, [
                 idCategorie,
                 newEspeceAnimal.rows[0].id

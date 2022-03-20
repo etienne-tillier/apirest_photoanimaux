@@ -87,15 +87,8 @@ const updateSortie = async (req, res) => {
 // insert a new sortie
 const insertSortie = async (req, res) => {
   try {
-    const {
-      idutilisateur,
-      date,
-      description,
-      latitude,
-      longitude,
-      prive,
-      especes,
-    } = req.body;
+    const { idutilisateur, date, description, latitude, longitude, prive, especes } = req.body
+    console.log(req.body)
     //suffit pour l'ajout sur la bd
     const newSortie = await pool.query(queries.insertSortie, [
       idutilisateur,
