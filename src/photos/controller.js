@@ -62,6 +62,8 @@ const updatePhoto = async (req,res) => {
 // insert a new photo
 const insertPhoto = async (req,res) => {
     try {
+        console.log(req.body)
+
         const {idespeceanimal, idsortie, iso, latitude, longitude, lienfichier, description, camera, objectif, ouverture, vitesse} = req.body
         //suffit pour l'ajout sur la bd
         const newPhoto = await pool.query(queries.insertPhoto, [
@@ -70,7 +72,7 @@ const insertPhoto = async (req,res) => {
             iso,
             latitude,
             longitude,
-            lienfichier,
+            req.file.destination + "/" + req.body.idsortie + "-" + req.file.originalname,
             description,
             camera,
             objectif,

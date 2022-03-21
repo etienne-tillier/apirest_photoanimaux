@@ -10,7 +10,15 @@ const getAllSorties = async (req, res) => {
       let especesForSortie = await pool.query(queries.getAllEspeceForASortie, [
         allSorties.rows[i].id,
       ]);
+      const photos = await pool.query(queries.getAllPhotosForASortie, [
+        allSorties.rows[i].id,
+      ])
       allSorties.rows[i].especes = especesForSortie.rows;
+      let listePhoto = []
+      for (let photo of photos.rows){
+        listePhoto.push(photo)
+      }
+      allSorties.rows[i].photos = listePhoto
     }
     res.status(200).json(allSorties.rows);
   } catch (err) {

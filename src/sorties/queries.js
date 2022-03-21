@@ -12,6 +12,7 @@ const getAllEspeceForASortie =
 const deleteAllEspeceForSortie =
   "DELETE FROM associationespecesortie WHERE idsortie = $1";
 const getSortiesForAnUtilisateur = "SELECT * FROM sorties WHERE idutilisateur = $1";
+const getAllPhotosForASortie = "SELECT * FROM photos WHERE idsortie = $1";
 
 module.exports = {
   getSorties,
@@ -22,5 +23,6 @@ module.exports = {
   insertEspeceSortie,
   getAllEspeceForASortie,
   deleteAllEspeceForSortie,
-  getSortiesForAnUtilisateur
+  getSortiesForAnUtilisateur,
+  getAllPhotosForASortie
 };

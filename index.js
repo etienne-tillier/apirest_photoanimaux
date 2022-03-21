@@ -14,6 +14,7 @@ app.use(express.json()) //req.body
 //ROUTES//
 
 app.use("/images/especeAnimaux",express.static("images/especeAnimaux"))
+app.use("/images/photos",express.static("images/photos"))
 
 app.use("/utilisateurs", userRoutes)
 app.use("/especeAnimal", especeAnimalRoutes)
