@@ -11,7 +11,7 @@ app.use(express.json()) //req.body
 
 app.get("/", controller.getAllSorties)
 app.get("/:id", controller.getSortieId)
-app.get("/publique/", controller.getAllPublicSortie)
+app.get("/publique", controller.getAllPublicSortie)
 app.get("/utilisateur/:id", controller.getAllSortiesUtilisateur)
 app.post("/", controller.insertSortie)
 app.put("/:id", controller.updateSortie)
