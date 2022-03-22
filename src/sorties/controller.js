@@ -27,10 +27,34 @@ const getAllSorties = async (req, res) => {
 };
 
 
+const getAllPublicSortie = async (req, res) => {
+  try {
+    const sortiesPubliques = await pool.query(queries.getAllSortiesPublic,[false])
+    for (let i = 0; i < sortiesPubliques.rows.length; i++) {
+      let especesForSortie = await pool.query(queries.getAllEspeceForASortie, [
+        sortiesPubliques.rows[i].id,
+      ]);
+      const photos = await pool.query(queries.getAllPhotosForASortie, [
+        sortiesPubliques.rows[i].id,
+      ])
+      sortiesPubliques.rows[i].especes = especesForSortie.rows;
+      let listePhoto = []
+      for (let photo of photos.rows){
+        listePhoto.push(photo)
+      }
+      sortiesPubliques.rows[i].photos = listePhoto
+    }
+    res.status(200).json(sortiesPubliques.rows);
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
+
 //get all sorties for an utilisateur
 const getAllSortiesUtilisateur = async (req, res) => {
   try {
-    const {idutilisateur} = req.body
+    const idutilisateur = req.params.id
     const allSorties = await pool.query(queries.getSortiesForAnUtilisateur, [
       idutilisateur
     ]);
@@ -38,7 +62,16 @@ const getAllSortiesUtilisateur = async (req, res) => {
       let especesForSortie = await pool.query(queries.getAllEspeceForASortie, [
         allSorties.rows[i].id,
       ]);
+      
       allSorties.rows[i].especes = especesForSortie.rows;
+      const photos = await pool.query(queries.getAllPhotosForASortie, [
+        allSorties.rows[i].id,
+      ])
+      let listePhoto = []
+      for (let photo of photos.rows){
+        listePhoto.push(photo)
+      }
+      allSorties.rows[i].photos = listePhoto
     }
     res.status(200).json(allSorties.rows);
   } catch (err) {
@@ -143,4 +176,5 @@ module.exports = {
   deleteSortie,
   updateSortie,
   getAllSortiesUtilisateur,
+  getAllPublicSortie,
 };
