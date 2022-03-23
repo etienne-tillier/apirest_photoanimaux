@@ -46,11 +46,11 @@ const insertCategorieAnimal = async (req,res) => {
     try {
         const { nomcategorie } = req.body
         //suffit pour l'ajout sur la bd
-        const newUser = await pool.query(queries.insertCategorieAnimal, [
+        const newCategorie = await pool.query(queries.insertCategorieAnimal, [
             nomcategorie
         ])
         //envoi sur l'api
-        res.status(200).json(newUser.rows[0])
+        res.status(200).json(newCategorie.rows[0])
     } catch (err) {
         console.error(err.message)
     }
