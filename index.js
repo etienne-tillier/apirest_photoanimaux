@@ -1,3 +1,4 @@
+const {decodeToken} = require("./src/middleware/index")
 const express = require("express")
 const app = express()
 const cors = require("cors")
@@ -11,15 +12,15 @@ const categorieAnimalRoutes = require("./src/categorieAnimal/routes")
 //middleware
 app.use(cors())
 app.use(express.json()) //req.body
-//ROUTES//
+
 
 app.use("/images/especeAnimaux",express.static("images/especeAnimaux"))
 app.use("/images/photos",express.static("images/photos"))
 
 app.use("/utilisateurs", userRoutes)
 app.use("/especeAnimal", especeAnimalRoutes)
-app.use("/photos", photoRoutes)
-app.use("/sorties", sortieRoutes)
+app.use("/photos", decodeToken, photoRoutes)
+app.use("/sorties", decodeToken ,sortieRoutes)
 app.use("/categorieAnimal", categorieAnimalRoutes)
 
 

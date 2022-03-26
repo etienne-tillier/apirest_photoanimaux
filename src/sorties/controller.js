@@ -145,6 +145,7 @@ const insertSortie = async (req, res) => {
       prive,
     ]);
 
+    //ajout sur la table associative de toutes les espèces qui font référence la sortie insérée
     for (let i = 0; i < especes.length; i++) {
       await pool.query(queries.insertEspeceSortie, [
         newSortie.rows[0].id,
