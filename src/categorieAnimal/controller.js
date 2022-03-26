@@ -9,6 +9,7 @@ const getAllCategoriesAnimal = async (req,res) => {
         res.status(200).json(allCategoriesAnimal.rows)
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -22,6 +23,7 @@ const getCategorieAnimalId = async (req,res) => {
         res.status(200).json(categorieAnimal.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -37,6 +39,7 @@ const updateCategorieAnimal = async (req,res) => {
         res.status(200).send("categorieAnimal updated ! ")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -53,6 +56,7 @@ const insertCategorieAnimal = async (req,res) => {
         res.status(200).json(newCategorie.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -66,6 +70,7 @@ const deleteCategorieAnimal = async (req,res) => {
         res.status(200).send("categorieAnimal deleted")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 

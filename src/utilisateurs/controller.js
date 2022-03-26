@@ -9,6 +9,7 @@ const getAllUtilisateurs = async (req,res) => {
         res.status(200).json(allUtilisateurs.rows)
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -22,6 +23,7 @@ const getUtilisateurId = async (req,res) => {
         res.status(200).json(utilsateur.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -39,6 +41,7 @@ const updateUtilisateur = async (req,res) => {
         res.status(200).send("utilisateur updated ! ")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -58,6 +61,7 @@ const insertUtilisateur = async (req,res) => {
         res.status(201).json(newUtilisateur.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -71,6 +75,7 @@ const deleteUtilisateur = async (req,res) => {
         res.status(200).send("utilisateur deleted")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 

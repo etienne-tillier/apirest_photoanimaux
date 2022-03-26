@@ -23,10 +23,11 @@ const getAllSorties = async (req, res) => {
     res.status(200).json(allSorties.rows);
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 
-
+//Get toutes les sorties publiques
 const getAllPublicSortie = async (req, res) => {
   try {
     const sortiesPubliques = await pool.query(queries.getAllSortiesPublic,[false])
@@ -47,6 +48,7 @@ const getAllPublicSortie = async (req, res) => {
     res.status(200).json(sortiesPubliques.rows);
   } catch (err) {
     console.error(err.message)
+    res.status(404).send({message: err.message})
   }
 }
 
@@ -76,6 +78,7 @@ const getAllSortiesUtilisateur = async (req, res) => {
     res.status(200).json(allSorties.rows);
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 
@@ -91,6 +94,7 @@ const getSortieId = async (req, res) => {
     res.status(200).json(sortie.rows[0]);
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 
@@ -122,6 +126,7 @@ const updateSortie = async (req, res) => {
     res.status(200).send("sortie updated ! ");
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 
@@ -154,6 +159,7 @@ const insertSortie = async (req, res) => {
     res.status(201).json(newSortie.rows[0]);
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 
@@ -166,6 +172,7 @@ const deleteSortie = async (req, res) => {
     res.status(200).send("sortie deleted");
   } catch (err) {
     console.error(err.message);
+    res.status(404).send({message: err.message})
   }
 };
 

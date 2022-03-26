@@ -15,6 +15,7 @@ const getAllPhotos = async (req,res) => {
         res.status(200).json(allPhotos.rows)
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -32,6 +33,7 @@ const getPhotoId = async (req,res) => {
         res.status(200).json(photo.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -55,6 +57,7 @@ const updatePhoto = async (req,res) => {
         res.status(200).send("photo updated ! ")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -87,6 +90,7 @@ const insertPhoto = async (req,res) => {
         res.status(201).json(newPhoto.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -100,6 +104,7 @@ const deletePhoto = async (req,res) => {
         res.status(200).send("photo deleted")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 

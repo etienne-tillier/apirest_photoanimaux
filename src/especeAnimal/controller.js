@@ -16,6 +16,7 @@ const getAllEspeceAnimals = async (req,res) => {
         res.status(200).json(allEspeceAnimals.rows)
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -34,6 +35,7 @@ const getEspeceAnimalId = async (req,res) => {
         res.status(200).json(especeAnimal.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -43,12 +45,14 @@ const updateEspeceAnimal = async (req,res) => {
     try {
         const {nomespece, poidsmoyen, couleur, imageEspece, taille, categories} = req.body
         let lienImage = ""
+        //s'il y a une image alors on la met à jour sinon rien
         if (req.file) {
             lienImage = req.file.destination + "/" + req.file.originalname
         }
         else {
             lienImage = imageEspece
         }
+        //update
         const especeAnimalUpdated = await pool.query(queries.updateEspeceAnimal , [
             nomespece,
             poidsmoyen,
@@ -57,6 +61,7 @@ const updateEspeceAnimal = async (req,res) => {
             taille,
             req.params.id
         ])
+        //on supprimer toutes les anciennes catégories pour remettre les nouvelles ensuite
         await pool.query(queries.deleteAllCategoeriesForAnAnimal, [
             req.params.id
         ])
@@ -70,6 +75,7 @@ const updateEspeceAnimal = async (req,res) => {
         res.status(200).send("especeAnimal updated ! ")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -103,6 +109,7 @@ const insertEspeceAnimal = async (req,res) => {
         res.status(201).json(newEspeceAnimal.rows[0])
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
@@ -116,6 +123,7 @@ const deleteEspeceAnimal = async (req,res) => {
         res.status(200).send("especeAnimal deleted")
     } catch (err) {
         console.error(err.message)
+        res.status(404).send({message: err.message})
     }
 }
 
