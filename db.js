@@ -9,4 +9,11 @@ const pool = new Pool({
   database: process.env.DATABASE_NAME,
 });
 
-module.exports = pool;
+const herokuPool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+})
+
+module.exports = (process.env.PORT ? herokuPool : pool);
