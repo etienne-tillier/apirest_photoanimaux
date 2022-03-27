@@ -23,7 +23,7 @@ app.use("/photos", decodeToken, photoRoutes)
 app.use("/sorties", decodeToken ,sortieRoutes)
 app.use("/categorieAnimal", categorieAnimalRoutes)
 
-
-app.listen(5000, () => {
+//5000
+app.listen(80, () => {
     console.log("server has started on port 5000 ! ")
 })
