@@ -5,7 +5,7 @@
 -- Dumped from database version 14.2
 -- Dumped by pg_dump version 14.2
 
--- Started on 2022-03-27 15:46:30
+-- Started on 2022-03-29 16:25:26
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -225,13 +225,58 @@ ALTER SEQUENCE public.utilisateurs_id_seq OWNED BY public.utilisateurs.id;
 -- Data for Name: associationcategorieespece; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (3, 27);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (5, 27);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (3, 37);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (4, 38);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (5, 38);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (3, 39);
-INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (4, 39);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 47);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (9, 47);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 48);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (11, 49);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 49);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (12, 49);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (13, 50);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 50);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 51);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (14, 51);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 52);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (12, 52);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (15, 52);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (14, 53);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 53);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 54);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (16, 55);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 55);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 56);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (17, 56);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (9, 56);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (18, 56);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 57);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (19, 57);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (20, 58);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 58);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (9, 58);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 59);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (21, 59);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (22, 59);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (23, 60);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 60);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (24, 60);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (26, 61);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (25, 61);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 61);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (13, 62);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 62);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (27, 63);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 63);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (28, 64);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 64);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (15, 64);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (12, 64);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (21, 64);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (23, 65);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 65);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (10, 66);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (8, 67);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (9, 67);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (26, 67);
+INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (18, 67);
 
 
 --
@@ -240,18 +285,16 @@ INSERT INTO public.associationcategorieespece (idcategorie, idespece) VALUES (4,
 -- Data for Name: associationespecesortie; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (49, 37);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (54, 27);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (55, 30);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (56, 37);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (57, 37);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (59, 30);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (60, 39);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (61, 39);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (67, 27);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (68, 27);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (69, 37);
-INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (72, 37);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (73, 65);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (74, 49);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (74, 52);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (75, 51);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (76, 56);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (77, 63);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (78, 67);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (78, 60);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (79, 61);
+INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (79, 65);
 
 
 --
@@ -260,9 +303,25 @@ INSERT INTO public.associationespecesortie (idsortie, idespece) VALUES (72, 37);
 -- Data for Name: categoriesanimal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (3, 'poisson');
-INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (4, 'insecte');
-INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (5, 'reptile');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (8, 'Oiseaux');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (9, 'Rapaces');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (10, 'Mamifères');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (12, 'Caprinés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (13, 'Rongeurs');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (14, 'Cervidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (15, 'Bovidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (16, 'Corvidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (17, 'Vautours');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (18, 'Accipitridés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (19, 'Ardeidae');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (20, 'Strigidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (21, 'Herbivores');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (22, 'Léporidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (23, 'Canidés');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (25, 'Félins');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (26, 'Carnivores');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (27, 'Alcedinidae');
+INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE VALUES (28, 'Ovins');
 
 
 --
@@ -271,11 +330,27 @@ INSERT INTO public.categoriesanimal (id, nomcategorie) OVERRIDING SYSTEM VALUE V
 -- Data for Name: especeanimal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (30, 77, 132, 'images/especeAnimaux/ouginak.png', 'chien', 'noir');
-INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (27, 10, 10, 'images/especeAnimaux/78198f9376a2c73b750e8258415657df.jpg', 'chat', 'bleu');
-INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (37, 12, 74, 'images/especeAnimaux/bonobo.jpg', 'singe', 'marron clair');
-INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (38, 125, 250, 'images/especeAnimaux/mulot.JPG', 'giraffe', 'marron');
-INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (39, 35, 145, 'images/especeAnimaux/singiu.jpg', 'orang outan', 'noir');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (47, 5, 210, 'images/especeAnimaux/aigle royal.jpg', 'Aigle royal', 'noir et brun');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (48, 12, 70, 'images/especeAnimaux/blaireau.jpg', 'Blaireau', 'brun foncé,  noir et blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (49, 70, 150, 'images/especeAnimaux/bouquetin.jpg', 'Bouquetin', 'brun');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (50, 20, 100, 'images/especeAnimaux/castor.jpg', 'Castor', 'brun foncé');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (51, 180, 140, 'images/especeAnimaux/cerf.jpg', 'Cerf élaphe', 'brun-roux, gris-brun');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (52, 32, 80, 'images/especeAnimaux/chamoix.jpg', 'Chamois', 'noir brun foncé, beige');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (53, 20, 60, 'images/especeAnimaux/chevreuil.jpg', 'Chevreuil', 'brun, gris');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (54, 1, 60, 'images/especeAnimaux/coq bruyere.jpg', 'Coq de bruyère', 'noir, brun, blanc, gris, rouge');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (55, 1.5, 130, 'images/especeAnimaux/corbeau.jpg', 'Grand corbeau', 'noir');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (56, 6, 300, 'images/especeAnimaux/gypaete.jpg', 'Gypaète barbu', 'roux orangé, blanc, noir');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (57, 2, 180, 'images/especeAnimaux/héron cendré.jpg', 'Héron cendré', 'gris, blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (58, 0.3, 90, 'images/especeAnimaux/hibouxmoyen duc.jpg', 'Hibou moyen-duc', 'brun, noir, gris');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (59, 5, 60, 'images/especeAnimaux/lièvre.jpg', 'Lièvre', 'brun, brun-roux, blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (60, 35, 80, 'images/especeAnimaux/loup.jpg', 'Loup gris commun', 'gris, noir, blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (61, 25, 70, 'images/especeAnimaux/lynx.jpg', 'Lynx boréal', 'brun clair, noir, blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (62, 7, 60, 'images/especeAnimaux/marmotte.jpg', 'Marmotte', 'brun, noir, marron');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (63, 0.035, 16, 'images/especeAnimaux/martin pecheur.jpg', 'Martin-pêcheur d''Europe', 'bleu, roux, blanc');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (64, 40, 70, 'images/especeAnimaux/mouflon.jpg', 'Mouflon', 'brun foncé');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (65, 10, 40, 'images/especeAnimaux/renard.jpg', 'Renard', 'brun, gris, roux');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (66, 150, 100, 'images/especeAnimaux/sanglier.jpg', 'Sanglier', 'gris-brun');
+INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, couleur) OVERRIDING SYSTEM VALUE VALUES (67, 9, 260, 'images/especeAnimaux/vautour fauve.jpg', 'Vautour fauve', 'brun, noir, blanc');
 
 
 --
@@ -284,17 +359,22 @@ INSERT INTO public.especeanimal (id, poidsmoyen, taille, image, nomespece, coule
 -- Data for Name: photos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (14, 37, 250, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/57-bonobo.jpg', 'Superbe photo de près avec un singe', 'NIKON D90', '50mm', 'f4', '100', 14, 14, 57);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (16, 27, 458, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/59-78198f9376a2c73b750e8258415657df.jpg', 'waw le chat', '4848', '900mm', 'f5', '258', 15, 15, 59);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (17, 27, 152, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/60-croix.png', 'beau chaton', 'adazda', '2452', '2551', '2854185', 1245, 1548, 60);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (18, 37, 6581, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/60-mm.jpg', '65456', '518', '468', '68', '54', 655, 468, 60);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (19, 37, 15415641, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/60-bronze.png', 'azdazdza', 'adazda', '4515', '1561', '651', 651, 565641, 60);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (20, 37, 1861, 'images/photos/jPIj2beVUcVwCxN4aDFgSE1fxsm1/61-index.jpg', 'waw', '48464', '684165', '16854', '1354', 48, 2, 61);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (21, 30, 458, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/68-el chieno.png', 'mega dog', '485', '458965', '458', '458', 44, 10, 68);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (22, 37, 458, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/68-bonobo.jpg', '458', '458', '458', '458', '458', 458, 458, 68);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (23, 27, 200, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/68-index.jpg', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'NIKON d90', '500mm', 'f4', '450', 42.6, 2.5, 68);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (24, 30, 2000, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/68-ouginak.png', 'joli chien', 'nikon d4s', '400mm', 'f8', '300', 42, 42, 68);
-INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (25, 38, 400, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/69-ivanlemonkas.png', 'belle giraffe qui court', 'NIKON D4S', '350mm', 'f8', '500', 42, 18, 69);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (27, 65, 200, 'images/photos/eiC2vq8z9sW3KlAvV5IRdz1nU2F2/73-renard1.jpg', 'Il était vraiment devant moi au moment de cette photo. 20m je dirais.', 'Nikon D90', '300mm', 'f4', '400', 10, 10, 73);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (28, 52, 700, 'images/photos/ouJyMUv9PVdshiyqx6J4gQUtAal1/74-chamois3.jpg', 'Un des deux chamois que j''ai pu photographier', 'Nikon D4S', '400mm', 'f8', '800', 10, 10, 74);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (29, 49, 400, 'images/photos/ouJyMUv9PVdshiyqx6J4gQUtAal1/74-bouquetin1.jpg', 'Magnifique bouquetin', 'Nikon D4S', '400mm', 'f7', '600', 10, 10, 74);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (30, 51, 1000, 'images/photos/ouJyMUv9PVdshiyqx6J4gQUtAal1/75-cerf1.jpg', 'Il ne m''a pas vu, j''ai pas bougé', 'Nikon D4S', '400mm', 'f4', '500', 10, 10, 75);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (31, 56, 300, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/76-gypaete1.jpg', 'Très curieux, il est passé très près', 'Nikon D90', '300mm', 'f4', '2000', 10, 10, 76);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (32, 56, 200, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/76-gypaete2.jpg', 'J''ai aussi eu la chance de le voir se poser', 'Nikon D90', '300mm', 'f7', '400', 10, 10, 76);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (33, 63, 400, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/77-martin pecheur.jpg', 'Le martin sur sa branche comme à son habitude', 'Nikon D4S', '400mm', 'f7', '800', 10, 10, 77);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (34, 63, 200, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/77-martinpecheur.jpg', 'En train de pêcher..', 'Nikon D4S', '400mm', 'f4', '800', 10, 10, 77);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (35, 67, 400, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/78-vautour1.jpg', 'Il devait y avoir une carcasse pas très loin', 'Nikon D90', '500mm', 'f4', '1500', 10, 10, 78);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (36, 60, 200, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/78-loups2.jpg', 'Encore une belle photo du loup ! ', 'Nikon D90', '300mm', 'f4', '500', 10, 10, 78);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (37, 60, 400, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/78-louip1.jpeg', 'Grande surprise de voir le loup ici', 'Nikon D90', '300mm', 'f7', '600', 10, 10, 78);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (38, 67, 200, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/78-vautour3.jpg', 'Beau spécimen', 'Nikon D90', '500mm', 'f4', '1400', 10, 10, 78);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (39, 67, 400, 'images/photos/RdkJhEhLnEOcvbVoHFJZFRiVCPW2/78-vautour2.jpg', 'Au top celui-ci', 'Nikon D90', '500mm', 'f4', '1700', 10, 10, 78);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (40, 61, 400, 'images/photos/jPIj2beVUcVwCxN4aDFgSE1fxsm1/79-lynx2.jpg', 'Il est resté un peu avec nous sans nous voir', 'Nikon D4S', '300mm', 'f11', '800', 10, 10, 79);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (41, 61, 800, 'images/photos/jPIj2beVUcVwCxN4aDFgSE1fxsm1/79-lynx1.jpg', 'Première rencontre avec le lynx', 'Nikon D4S', '300mm', 'f4', '500', 10, 10, 79);
+INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, camera, objectif, ouverture, vitesse, longitude, latitude, idsortie) OVERRIDING SYSTEM VALUE VALUES (42, 65, 600, 'images/photos/jPIj2beVUcVwCxN4aDFgSE1fxsm1/79-renard3.jpg', 'Un renard est venu à nous sur le chemin du retour', 'Nikon D4S', '300mm', 'f4', '500', 10, 10, 79);
 
 
 --
@@ -303,20 +383,13 @@ INSERT INTO public.photos (id, idespeceanimal, iso, lienfichier, description, ca
 -- Data for Name: sorties; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (49, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-09', 'adzada', 14, 14, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (51, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-09', 'adzada', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (52, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-16', 'azdazda', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (54, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-17', 'j''ai vu un super chat', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (55, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-15', 'Superbe sortie autour de mon chien', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (56, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-05', 'j''ai vu un super singe', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (57, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-06', 'Super sortie avec des singes', 15, 15, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (59, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-02', 'testrezsr', 14, 14, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (60, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-09', 'superbe orang outant', 14.6, 15.8, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (61, 'jPIj2beVUcVwCxN4aDFgSE1fxsm1', '2022-03-01', 'testtest aa', 2, 48, false);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (67, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-03', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 2, 49, true);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (68, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-15', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 10, 44, true);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (69, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-08', 'la singe de bamakos', 10.3, 42.2, true);
-INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (72, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-13', 'adada', 4, 47, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (77, 'RdkJhEhLnEOcvbVoHFJZFRiVCPW2', '2022-03-10', 'Belle sortie', 4.01, 43.59, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (78, 'RdkJhEhLnEOcvbVoHFJZFRiVCPW2', '2022-03-17', 'On allait pour prendre des photos des vautours, et on a finalement vu un loup', 3.07, 44.05, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (79, 'jPIj2beVUcVwCxN4aDFgSE1fxsm1', '2022-03-17', 'Incroyable d''avoir vu le lynx. On a attendu 5 heures pour le voir.', 6.77, 47.79, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (73, 'eiC2vq8z9sW3KlAvV5IRdz1nU2F2', '2022-03-17', 'Belle rencontre avec un renard', 3, 47.5, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (74, 'ouJyMUv9PVdshiyqx6J4gQUtAal1', '2022-03-07', 'Sortie en montagne dans les alpes. J''ai approché deux chamois sans qu''ils me voient pour pouvoir les photographier. Un bouquetin est aussi venu par la suite !', 6.69, 45.31, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (75, 'ouJyMUv9PVdshiyqx6J4gQUtAal1', '2022-03-09', 'Paysages magnifiques, les cerfs étaient au rendez-vous !', 6.05, 45.80, false);
+INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, latitude, prive) OVERRIDING SYSTEM VALUE VALUES (76, 'RdkJhEhLnEOcvbVoHFJZFRiVCPW2', '2022-03-04', 'Sortie au caillou, le gypaète au rendez-vous comme d''habitude', 6.53, 45.28, false);
 
 
 --
@@ -327,6 +400,8 @@ INSERT INTO public.sorties (id, idutilisateur, date, description, longitude, lat
 
 INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES ('eiC2vq8z9sW3KlAvV5IRdz1nU2F2', true, 'etienne1.tillier@gmail.com', 'etienne66');
 INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES ('jPIj2beVUcVwCxN4aDFgSE1fxsm1', false, 'etienne.tillier@gmail.com', 'nonadmin');
+INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES ('ouJyMUv9PVdshiyqx6J4gQUtAal1', false, 'testnonadmin@gmail.com', 'testnonadmin');
+INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES ('RdkJhEhLnEOcvbVoHFJZFRiVCPW2', true, 'testadmin@gmail.com', 'testadmin');
 
 
 --
@@ -335,7 +410,7 @@ INSERT INTO public.utilisateurs (id, isadmin, email, pseudo) VALUES ('jPIj2beVUc
 -- Name: CategoriesAnimal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."CategoriesAnimal_id_seq"', 7, true);
+SELECT pg_catalog.setval('public."CategoriesAnimal_id_seq"', 28, true);
 
 
 --
@@ -344,7 +419,7 @@ SELECT pg_catalog.setval('public."CategoriesAnimal_id_seq"', 7, true);
 -- Name: EspeceAnimal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."EspeceAnimal_id_seq"', 46, true);
+SELECT pg_catalog.setval('public."EspeceAnimal_id_seq"', 67, true);
 
 
 --
@@ -353,7 +428,7 @@ SELECT pg_catalog.setval('public."EspeceAnimal_id_seq"', 46, true);
 -- Name: Photos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Photos_id_seq"', 26, true);
+SELECT pg_catalog.setval('public."Photos_id_seq"', 42, true);
 
 
 --
@@ -362,7 +437,7 @@ SELECT pg_catalog.setval('public."Photos_id_seq"', 26, true);
 -- Name: Sorties_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Sorties_id_seq"', 72, true);
+SELECT pg_catalog.setval('public."Sorties_id_seq"', 79, true);
 
 
 --
@@ -491,7 +566,7 @@ ALTER TABLE ONLY public.sorties
     ADD CONSTRAINT utilisateur FOREIGN KEY (idutilisateur) REFERENCES public.utilisateurs(id) ON DELETE CASCADE;
 
 
--- Completed on 2022-03-27 15:46:30
+-- Completed on 2022-03-29 16:25:26
 
 --
 -- PostgreSQL database dump complete

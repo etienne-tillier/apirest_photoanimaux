@@ -7,7 +7,6 @@ const especeAnimalRoutes = require("./src/especeAnimal/routes")
 const photoRoutes = require("./src/photos/routes")
 const sortieRoutes = require("./src/sorties/routes")
 const categorieAnimalRoutes = require("./src/categorieAnimal/routes")
-const path = require("path")
 
 
 //middleware
@@ -25,11 +24,12 @@ app.use("/sorties", decodeToken ,sortieRoutes)
 app.use("/categorieAnimal", categorieAnimalRoutes)
 
 
-if (process.env.NODE_END === "production"){
-    //server static content
-}
 
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log("server has started on port 5000 ! ")
-})
+app.listen(5000, () => {
+        console.log("server has started on port 5000 ! ")
+    })
+
+// app.listen(process.env.PORT || 5000, () => {
+//     console.log("server has started on port 5000 ! ")
+// })
