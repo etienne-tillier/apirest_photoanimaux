@@ -4,6 +4,8 @@ const app = express()
 const cors = require("cors")
 const multer = require("multer")
 const fs = require("fs")
+const { cloudinary } = require("../config/cloudinary")
+
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -35,6 +37,20 @@ const upload = multer({
     },
     fileFilter: fileFilter
 })
+
+const newUploadEspece = async (req,res) => {
+    try {
+        const fileStr = req.body.data
+        const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
+            upload_preset: 'addEspece'
+        })
+        console.log(uploadedResponse)
+        res.json({ msg : "worked"})
+    }   catch (error){
+            console.log(error)
+            res.status(500).json( {msg : "Something went wrong" })
+    }
+}
 
 //middleware
 app.use(cors())

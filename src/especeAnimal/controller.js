@@ -41,13 +41,13 @@ const getEspeceAnimalId = async (req,res) => {
 
 
 // update an animal by id
-const updateEspeceAnimal = async (req,res) => {
+const updateEspeceAnimal = async (req,res,secureUrl) => {
     try {
         const {nomespece, poidsmoyen, couleur, imageEspece, taille, categories} = req.body
         let lienImage = ""
         //s'il y a une image alors on la met à jour sinon rien
         if (req.file) {
-            lienImage = req.file.destination + "/" + req.file.originalname
+            lienImage = secureUrl
         }
         else {
             lienImage = imageEspece
@@ -81,7 +81,7 @@ const updateEspeceAnimal = async (req,res) => {
 
 
 // insert a new animal
-const insertEspeceAnimal = async (req,res) => {
+const insertEspeceAnimal = async (req,res,secureUrl) => {
     try {
         console.log(req.file)
         const { nomespece, poidsmoyen, couleur, taille, categories } = req.body
@@ -90,7 +90,7 @@ const insertEspeceAnimal = async (req,res) => {
             nomespece,
             poidsmoyen,
             couleur,
-            req.file.destination + "/" + req.file.originalname,
+            secureUrl,
             taille
         ])
         let categoriesParsed = JSON.parse(categories);

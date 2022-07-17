@@ -4,6 +4,7 @@ const app = express()
 const cors = require("cors")
 const multer = require("multer")
 const {decodeToken} = require("../middleware/index")
+const {cloudinary} = require("../config/cloudinary")
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -23,6 +24,28 @@ const fileFilter = (req, file, cb) => {
     }
 }
 
+
+const newUploadEspece = async (req, res) => {
+    try {
+        const fileStr = req.file.path
+        console.log("testetst")
+        console.log(req.route.stack)
+        const uploadedResponse = await cloudinary.v2.uploader.upload(fileStr, {
+            upload_preset: 'addEspece',
+            use_filename: true,
+        })
+        console.log(uploadedResponse)
+        if (req.route.stack[0].method == "post"){
+            controller.insertEspeceAnimal(req,res,uploadedResponse.secure_url)
+        }
+        else {
+            controller.updateEspeceAnimal(req,res,uploadedResponse.secure_url)
+        }
+    }   catch (error){
+            console.log(error)
+    }
+}
+
 const upload = multer({
     storage: storage,
     limits: {
@@ -30,6 +53,9 @@ const upload = multer({
     },
     fileFilter: fileFilter
 })
+
+
+
 
 //middleware
 app.use(cors())
@@ -39,8 +65,8 @@ app.use(express.json()) //req.body
 
 app.get("/", controller.getAllEspeceAnimals)
 app.get("/:id", controller.getEspeceAnimalId)
-app.post("/", decodeToken, upload.single('imageEspece') ,controller.insertEspeceAnimal)
-app.put("/:id", decodeToken, upload.single('imageEspece'), controller.updateEspeceAnimal)
+app.post("/", decodeToken, upload.single('imageEspece'), newUploadEspece)
+app.put("/:id", decodeToken, upload.single('imageEspece'), newUploadEspece)
 app.delete("/:id", decodeToken, controller.deleteEspeceAnimal)
 
 module.exports = app
