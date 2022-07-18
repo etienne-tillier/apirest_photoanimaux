@@ -10,14 +10,14 @@ const { cloudinary } = require("../config/cloudinary")
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         console.log(req.body)
-        var dir = 'images/photos/' + req.body.uid;
+        var dir = 'images/photos'
         if (!fs.existsSync(dir)){
             fs.mkdirSync(dir);
         }
-        cb(null, 'images/photos/'+ req.body.uid)
+        cb(null, 'images/photos')
     },
     filename: function(req, file, cb){
-        cb(null, req.body.idsortie + "-" + file.originalname)
+        cb(null, req.body.uid + "-" + req.body.idsortie + "-" + file.originalname)
     }
 })
 
@@ -38,17 +38,27 @@ const upload = multer({
     fileFilter: fileFilter
 })
 
-const newUploadEspece = async (req,res) => {
+const newUploadImage = async (req, res) => {
     try {
-        const fileStr = req.body.data
-        const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-            upload_preset: 'addEspece'
+        const fileStr = req.file.path
+        console.log("body")
+        console.log(req.body)
+        console.log("filepath")
+        console.log(req.file)
+        const uploadedResponse = await cloudinary.v2.uploader.upload(fileStr, {
+            upload_preset: 'addSortieImage',
+            use_filename: true,
         })
+         // req.file.destination + "/" + req.body.idsortie + "-" + req.file.originalname,
         console.log(uploadedResponse)
-        res.json({ msg : "worked"})
+        if (req.route.stack[0].method == "post"){
+            controller.insertPhoto(req,res,uploadedResponse.secure_url)
+        }
+        else {
+            controller.updatePhoto(req,res,uploadedResponse.secure_url)
+        }
     }   catch (error){
             console.log(error)
-            res.status(500).json( {msg : "Something went wrong" })
     }
 }
 
@@ -60,7 +70,7 @@ app.use(express.json()) //req.body
 
 app.get("/", controller.getAllPhotos)
 app.get("/:id", controller.getPhotoId)
-app.post("/", upload.single("imagePhoto"), controller.insertPhoto)
+app.post("/", upload.single("imagePhoto"), newUploadImage)
 app.put("/:id", controller.updatePhoto)
 app.delete("/:id", controller.deletePhoto)
 

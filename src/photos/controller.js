@@ -63,7 +63,7 @@ const updatePhoto = async (req,res) => {
 
 
 // insert a new photo
-const insertPhoto = async (req,res) => {
+const insertPhoto = async (req,res,secureUrl) => {
     try {
         console.log(req.body)
 
@@ -75,7 +75,7 @@ const insertPhoto = async (req,res) => {
             iso,
             latitude,
             longitude,
-            req.file.destination + "/" + req.body.idsortie + "-" + req.file.originalname,
+            secureUrl,
             description,
             camera,
             objectif,

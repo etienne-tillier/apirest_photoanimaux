@@ -26,25 +26,33 @@ const fileFilter = (req, file, cb) => {
 
 
 const newUploadEspece = async (req, res) => {
-    try {
+    let secureUrl
+    if (req.file) {
+        try {
         const fileStr = req.file.path
-        console.log("testetst")
-        console.log(req.route.stack)
         const uploadedResponse = await cloudinary.v2.uploader.upload(fileStr, {
             upload_preset: 'addEspece',
             use_filename: true,
         })
         console.log(uploadedResponse)
-        if (req.route.stack[0].method == "post"){
-            controller.insertEspeceAnimal(req,res,uploadedResponse.secure_url)
-        }
-        else {
-            controller.updateEspeceAnimal(req,res,uploadedResponse.secure_url)
-        }
-    }   catch (error){
+        secureUrl = uploadedResponse.secure_url
+        }   catch (error){
             console.log(error)
+         }
+    } 
+    else {
+        secureUrl = req.body.imageEspece
     }
-}
+    if (req.route.stack[0].method == "post"){
+        controller.insertEspeceAnimal(req,res,secureUrl)
+    }
+    else {
+        controller.updateEspeceAnimal(req,res,secureUrl)
+    }
+
+
+    }
+
 
 const upload = multer({
     storage: storage,
